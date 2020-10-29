@@ -1,19 +1,12 @@
 class Boost < Formula
   desc "Collection of portable C++ source libraries"
   homepage "https://www.boost.org/"
-  url "https://bintray.com/boostorg/release/download_file?file_path=1.73.0%2Fsource%2Fboost_1_73_0.tar.bz2"
+  url "https://downloads.sourceforge.net/project/boost/boost/1.73.0/boost_1_73_0.tar.bz2"
   sha256 "4eb3b8d442b426dc35346235c8733b5ae35ba431690e38c6a8263dce9fcbb402"
   license "BSL-1.0"
-  head "https://github.com/boostorg/boost.git"
-
-  livecheck do
-    url "https://www.boost.org/feed/downloads.rss"
-    regex(/>Version v?(\d+(?:\.\d+)+)</i)
-  end
 
   bottle do
     cellar :any
-    rebuild 1
     sha256 "21b7a8b746e98a39c299b5db595f97ff24cb498fee5c3c38be690bcc2510137b" => :catalina
     sha256 "72159a6229ced562aa26100ce1c72f2ec3070cd6fe6e894e912abd9acc1b76bb" => :mojave
     sha256 "f7e7f920d91f6b47a99f342a1414b992f012c49441e62b5587502d53cb31af7b" => :high_sierra
